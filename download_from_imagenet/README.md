@@ -80,7 +80,8 @@ for progress in range(n_of_training_images):#store all the images on a directory
         None
 ```
 
-Result:
+Result:<br/>
+
 ![](https://i.imgur.com/VuLqf5G.png)
 ![](https://i.imgur.com/HxQo96m.png)
 
