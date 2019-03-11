@@ -6,7 +6,7 @@ Foolbox is a Python toolbox to create adversarial examples that fool neural netw
 pip3 install foolbox
 ```
 ## Documentation
- readthedocs: <br/>http://foolbox.readthedocs.io/
+ readthedocs: <br>http://foolbox.readthedocs.io/</br>
  paper: <br> https://arxiv.org/abs/1707.04131</br>
 
 ## Tutorial
