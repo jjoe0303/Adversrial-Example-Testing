@@ -13,7 +13,7 @@ raw_image = image.img_to_array(img)
 input_image = np.expand_dims(raw_image, axis = 0)
 input_image = preprocess_input(input_image)
 result = base_model.predict(input_image)
-#print(np.argmax(result))
+print(np.argmax(result))
 
 import foolbox 
 from foolbox.models import KerasModel
@@ -26,7 +26,25 @@ raw_image = image.img_to_array(img)
 
 # Apply the attack
 attack = foolbox.attacks.LBFGSAttack(model=fmodel, criterion=TargetClassProbability(282, p=.5)) 
-adversarial = attack(raw_image, label=282)
+##attack = foolbox.attacks.GradientAttack(model=fmodel) 
+##attack = foolbox.attacks.FGSM(model=fmodel) 
+##attack = foolbox.attacks.BIM(model=fmodel) 
+##attack = foolbox.attacks.L1BasicIterativeAttack(model=fmodel) 
+##attack = foolbox.attacks.L2BasicIterativeAttack(model=fmodel) 
+##attack = foolbox.attacks.PGD(model=fmodel) 
+##attack = foolbox.attacks.RandomPGD(model=fmodel) 
+##attack = foolbox.attacks.MomentumIterativeAttack(model=fmodel) 
+##attack = foolbox.attacks.DeepFoolAttack(model=fmodel) 
+##attack = foolbox.attacks.NewtonFoolAttack(model=fmodel) ### nice
+##attack = foolbox.attacks.DeepFoolL2Attack(model=fmodel) 
+##attack = foolbox.attacks.DeepFoolLinfinityAttack(model=fmodel) 
+##attack = foolbox.attacks.ADefAttack(model=fmodel) 
+##attack = foolbox.attacks.SLSQPAttack(model=fmodel) ### not work
+##attack = foolbox.attacks.SaliencyMapAttack(model=fmodel) 
+##attack = foolbox.attacks.IterativeGradientAttack(model=fmodel) ### Great
+##attack = foolbox.attacks.IterativeGradientSignAttack(model=fmodel) ### Great
+##attack = foolbox.attacks.CarliniWagnerL2Attack(model=fmodel) 
+adversarial = attack(raw_image, label=388)
 fresult = fmodel.predictions(adversarial)
 
 print(np.argmax(fresult))
