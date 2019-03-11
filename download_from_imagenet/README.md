@@ -10,7 +10,7 @@
 
 ![](https://i.imgur.com/wFESI4u.png)
 
-![](https://i.imgur.com/hGCcxZp.png)
+![](https://i.imgur.com/Bmwn2B9.png)
 
 ![](https://i.imgur.com/LJsUWRm.png)
 ```
